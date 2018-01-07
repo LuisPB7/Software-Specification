@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DRIVERS,NAMES">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(DRIVERS×NAMES))∈(∅ ⦂ ℙ(DRIVERS)) ⇸ (∅ ⦂ ℙ(NAMES))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DRIVERS,LICENSES">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(DRIVERS×LICENSES))∈(∅ ⦂ ℙ(DRIVERS)) ⤖ (∅ ⦂ ℙ(LICENSES))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMOVE_DRIVER/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMOVE_DRIVER/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="DRIVERS,LICENSES">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="OUT_DRIVER" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="dri_license" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="OUT_DRIVER∈REG_DRIVERS"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{OUT_DRIVER} ⩤ dri_license∈REG_DRIVERS ∖ {OUT_DRIVER} ⤖ REG_LICENSES ∖ dri_license[{OUT_DRIVER}]"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="REG_LICENSES⊆LICENSES"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="dri_license∈REG_DRIVERS ⤖ REG_LICENSES"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="NEW_DRIVER/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.prSets="CLIENTS,DRIVERS,EMAILS,LICENSES,NAMES,PLAN">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p1,p4,p8,p7,p9,p3,p6,p10">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="IN_DRIVER" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.prIdent name="IN_LICENSES" org.eventb.core.type="LICENSES"/>
+<org.eventb.core.prIdent name="IN_NAME" org.eventb.core.type="NAMES"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="cli_email" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.prIdent name="cli_name" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.prIdent name="cli_status" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.prIdent name="dri_license" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.prIdent name="dri_name" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cli_email∈REG_CLIENTS ⤖ REG_EMAILS"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cli_name∈REG_CLIENTS ⇸ REG_NAMES"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PLAN={VIP,REGULAR}"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="dri_name∪{IN_DRIVER ↦ IN_NAME}∈REG_DRIVERS∪{IN_DRIVER} ⇸ REG_NAMES∪{IN_NAME}"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="IN_NAME∈NAMES"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="REG_LICENSES⊆LICENSES"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬VIP=REGULAR"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="dri_license∈REG_DRIVERS ⤖ REG_LICENSES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="VIP≠REGULAR"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="IN_DRIVER∈DRIVERS ∖ REG_DRIVERS"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="IN_LICENSES∈LICENSES ∖ REG_LICENSES"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="REG_NAMES⊆NAMES"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="dri_name∈REG_DRIVERS ⇸ REG_NAMES"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="cli_status∈REG_CLIENTS → PLAN"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="REG_EMAILS⊆EMAILS"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="NEW_DRIVER/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="DRIVERS,LICENSES">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="IN_DRIVER" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.prIdent name="IN_LICENSES" org.eventb.core.type="LICENSES"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="dri_license" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="IN_NAME∈NAMES">
+<org.eventb.core.prIdent name="IN_NAME" org.eventb.core.type="NAMES"/>
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="REG_LICENSES⊆LICENSES"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="dri_license∈REG_DRIVERS ⤖ REG_LICENSES"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="IN_DRIVER∈DRIVERS ∖ REG_DRIVERS"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="dri_license∪{IN_DRIVER ↦ IN_LICENSES}∈REG_DRIVERS∪{IN_DRIVER} ⤖ REG_LICENSES∪{IN_LICENSES}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="IN_LICENSES∈LICENSES ∖ REG_LICENSES"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act3/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="NEW_DRIVER/REG_NAMES/EQL" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="NAMES" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p11,p12,p13,p14,p15,p16,p17,p2,p18"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p14,p2"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p11,p13"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ah (IN_NAME∈REG_NAMES)" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p3"/>
+<org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p3">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prPredRef name=".pred" org.eventb.core.prRef="p3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="IN_NAME" org.eventb.core.type="NAMES"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="cli_email∈REG_CLIENTS ⤖ REG_EMAILS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="cli_email" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="IN_NAME∈REG_NAMES"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="cli_status∈REG_CLIENTS ↠ STATUS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="cli_status" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PLAN={VIP,REGULAR}">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="IN_NAME∈NAMES"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="dri_name∈REG_DRIVERS ↠ REG_NAMES">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="dri_name" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="REG_NAMES∪{IN_NAME}=REG_NAMES"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="dri_license∈REG_DRIVERS ⤖ REG_LICENSES">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="dri_license" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="IN_DRIVER∈DRIVERS ∖ REG_DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="IN_DRIVER" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="REG_NAMES⊆NAMES"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="IN_LICENSES∈LICENSES ∖ REG_LICENSES">
+<org.eventb.core.prIdent name="IN_LICENSES" org.eventb.core.type="LICENSES"/>
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="cli_name∈REG_CLIENTS ↠ REG_NAMES">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="cli_name" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMOVE_DRIVER/REG_NAMES/EQL" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act7/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CLIENTS,PLAN">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(CLIENTS×PLAN))=(∅ ⦂ ℙ(CLIENTS×PLAN))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMOVE_CLIENT/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMOVE_CLIENT/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p8"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMOVE_CLIENT/act3/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p8"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMOVE_CLIENT/act4/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p8"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act2/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act5/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CLIENTS,EMAILS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(CLIENTS×EMAILS))=(∅ ⦂ ℙ(CLIENTS×EMAILS))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act6/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv4/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="VIP≠REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="REG_NAMES⊆NAMES">
+<org.eventb.core.prIdent name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.prIdent name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="STATUS⊆PLAN">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(PLAN)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS">
+<org.eventb.core.prIdent name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.prIdent name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REG_EMAILS⊆EMAILS">
+<org.eventb.core.prIdent name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.prIdent name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS">
+<org.eventb.core.prIdent name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.prIdent name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="REG_LICENSES⊆LICENSES">
+<org.eventb.core.prIdent name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.prIdent name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬VIP=REGULAR">
+<org.eventb.core.prIdent name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.prIdent name="VIP" org.eventb.core.type="PLAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

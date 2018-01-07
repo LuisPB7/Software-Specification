@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="REG_CLIENTS ≔ ∅" org.eventb.core.comment="Restriction 5" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="REG_EMAILS ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="REG_NAMES ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="cli_email ≔ ∅" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="cli_name ≔ ∅" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="cli_status ≔ ∅" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="REG_CLIENTS"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="REG_EMAILS"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="REG_NAMES"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="REG_CLIENTS ⊆ CLIENTS"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="REG_EMAILS ⊆ EMAILS"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv3" org.eventb.core.predicate="REG_NAMES ⊆ NAMES"/>
+<org.eventb.core.seesContext name="." org.eventb.core.target="ClientsContext"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NEW_CLIENT">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="IN_CLIENT"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="Restriction 2" org.eventb.core.identifier="IN_EMAIL"/>
+<org.eventb.core.parameter name=")" org.eventb.core.comment="Restriction 2" org.eventb.core.identifier="IN_NAME"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="IN_NAME ∈ NAMES"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="Restriction 1, 6" org.eventb.core.label="grd2" org.eventb.core.predicate="IN_CLIENT ∈ (CLIENTS ∖ REG_CLIENTS)"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="Restriction 3" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_EMAIL ∈ (EMAILS ∖ REG_EMAILS)"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="REG_CLIENTS ≔ REG_CLIENTS ∪ {IN_CLIENT}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="REG_EMAILS ≔ REG_EMAILS ∪ {IN_EMAIL}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="REG_NAMES ≔ REG_NAMES ∪ {IN_NAME}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="cli_status ≔ cli_status ∪ {IN_CLIENT ↦ REGULAR}" org.eventb.core.comment="Restriction 7" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="cli_email ≔ cli_email ∪ {IN_CLIENT ↦ IN_EMAIL}" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="cli_name ≔ cli_name ∪ {IN_CLIENT ↦ IN_NAME}" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REMOVE_CLIENT">
+<org.eventb.core.guard name="'" org.eventb.core.comment="Restriction 8" org.eventb.core.label="grd1" org.eventb.core.predicate="OUT_CLIENT ∈ REG_CLIENTS"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="OUT_CLIENT"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="REG_CLIENTS ≔ REG_CLIENTS ∖ {OUT_CLIENT}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="REG_EMAILS ≔ REG_EMAILS ∖ cli_email[{OUT_CLIENT}]" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="cli_status ≔ {OUT_CLIENT} ⩤ cli_status" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="cli_email ≔ {OUT_CLIENT} ⩤ cli_email " org.eventb.core.label="act5"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="cli_name ≔ {OUT_CLIENT} ⩤ cli_name" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv5" org.eventb.core.predicate="cli_email ∈ REG_CLIENTS ⤖ REG_EMAILS"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="cli_email"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv6" org.eventb.core.predicate="cli_name ∈ REG_CLIENTS ⇸ REG_NAMES "/>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="cli_name"/>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UPGRADE_PLAN">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="upgrading_client"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="Restriction 9" org.eventb.core.label="grd1" org.eventb.core.predicate="upgrading_client ∈ REG_CLIENTS"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="Restriction 10" org.eventb.core.label="grd2" org.eventb.core.predicate="cli_status[{upgrading_client}] = {REGULAR}"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="cli_status ≔ cli_status  {upgrading_client ↦ VIP}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="cli_status"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv7" org.eventb.core.predicate="cli_status ∈ REG_CLIENTS → PLAN"/>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DOWNGRADE_PLAN">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="downgrading_client"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="downgrading_client ∈ REG_CLIENTS"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="cli_status[{downgrading_client}] = {VIP}"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="cli_status ≔ cli_status  {downgrading_client ↦ REGULAR}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

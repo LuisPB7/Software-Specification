@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.poIdentifier name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.poIdentifier name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poIdentifier name="VIP" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poPredicate name="REGULAS" org.eventb.core.predicate="PLAN={VIP,REGULAR}" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="REGULAT" org.eventb.core.predicate="VIP≠REGULAR" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.axiom#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.poIdentifier name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_email" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="cli_name" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_status" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CLIENTS×EMAILS))∈(∅ ⦂ ℙ(CLIENTS)) ⤖ (∅ ⦂ ℙ(EMAILS))" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CLIENTS×NAMES))∈(∅ ⦂ ℙ(CLIENTS)) ⇸ (∅ ⦂ ℙ(NAMES))" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CLIENTS×PLAN))∈(∅ ⦂ ℙ(CLIENTS)) → PLAN" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClientsContex{" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="REG_NAMES'" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_status'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="cli_name'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_email'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="REG_CLIENTS'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="REG_EMAILS'" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClientsContex{" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTIDENTClientsContex{" org.eventb.core.poStamp="1"/>
+<org.eventb.core.poSequent name="NEW_CLIENT/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cli_email∪{IN_CLIENT ↦ IN_EMAIL}∈REG_CLIENTS∪{IN_CLIENT} ⤖ REG_EMAILS∪{IN_EMAIL}" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#NEW_CLIENT\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_CLIENT/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cli_name∪{IN_CLIENT ↦ IN_NAME}∈REG_CLIENTS∪{IN_CLIENT} ⇸ REG_NAMES∪{IN_NAME}" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#NEW_CLIENT\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_CLIENT/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cli_status∪{IN_CLIENT ↦ REGULAR}∈REG_CLIENTS∪{IN_CLIENT} → PLAN" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#NEW_CLIENT\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClientsContex|" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="REG_NAMES'" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="IN_NAME" org.eventb.core.type="NAMES"/>
+<org.eventb.core.poIdentifier name="cli_status'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="cli_name'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_email'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="IN_EMAIL" org.eventb.core.type="EMAILS"/>
+<org.eventb.core.poIdentifier name="REG_CLIENTS'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="REG_EMAILS'" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.poIdentifier name="IN_CLIENT" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClientsContex|" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTIDENTClientsContex\|" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IN_NAME∈NAMES" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IN_CLIENT∈CLIENTS ∖ REG_CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IN_EMAIL∈EMAILS ∖ REG_EMAILS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="REMOVE_CLIENT/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{OUT_CLIENT} ⩤ cli_email∈REG_CLIENTS ∖ {OUT_CLIENT} ⤖ REG_EMAILS ∖ cli_email[{OUT_CLIENT}]" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#REMOVE_CLIENT\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="REMOVE_CLIENT/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{OUT_CLIENT} ⩤ cli_name∈REG_CLIENTS ∖ {OUT_CLIENT} ⇸ REG_NAMES" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#REMOVE_CLIENT\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="REMOVE_CLIENT/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{OUT_CLIENT} ⩤ cli_status∈REG_CLIENTS ∖ {OUT_CLIENT} → PLAN" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#REMOVE_CLIENT\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClientsContex}" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="cli_status'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="OUT_CLIENT" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.poIdentifier name="cli_name'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_email'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="REG_CLIENTS'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="REG_EMAILS'" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClientsContex}" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTIDENTClientsContex}" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="OUT_CLIENT∈REG_CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="UPGRADE_PLAN/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cli_status{upgrading_client ↦ VIP}∈REG_CLIENTS → PLAN" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#UPGRADE_PLAN\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClientsContex~" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="cli_status'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="upgrading_client" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClientsContex~" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTIDENTClientsContex~" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="upgrading_client∈REG_CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cli_status[{upgrading_client}]={REGULAR}" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="DOWNGRADE_PLAN/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTALLHYPClientsContey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cli_status{downgrading_client ↦ REGULAR}∈REG_CLIENTS → PLAN" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poSequent#DOWNGRADE_PLAN\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClientsContey'" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="cli_status'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="downgrading_client" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClientsContey'" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#EVTIDENTClientsContey'" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="downgrading_client∈REG_CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#:|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cli_status[{downgrading_client}]={VIP}" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#:|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/Clients.bpo|org.eventb.core.poFile#Clients|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="REG_EMAILS⊆EMAILS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="REG_NAMES⊆NAMES" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cli_email∈REG_CLIENTS ⤖ REG_EMAILS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="cli_name∈REG_CLIENTS ⇸ REG_NAMES" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cli_status∈REG_CLIENTS → PLAN" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

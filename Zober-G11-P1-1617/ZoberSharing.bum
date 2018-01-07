@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Rides"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ZoberSharingContext"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="BUSY_CARS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="ride_car"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="/" org.eventb.core.identifier="SCHEDULED_RIDES"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.comment="Carros disponiveis" org.eventb.core.identifier="AVAILABLE_CARS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.comment="Carro que vai dar boleia" org.eventb.core.identifier="RIDECAR"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=":" org.eventb.core.identifier="car_serv"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=";" org.eventb.core.identifier="ride_grade"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="?" org.eventb.core.identifier="BANNED_DRIVERS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="@" org.eventb.core.identifier="REG_DRIVERS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="A" org.eventb.core.identifier="car_owner"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="D" org.eventb.core.identifier="cli_status"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="E" org.eventb.core.identifier="ride_cli"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="G" org.eventb.core.identifier="REG_CLIENTS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="I" org.eventb.core.identifier="REG_EMAILS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="J" org.eventb.core.identifier="REG_NAMES"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="K" org.eventb.core.identifier="cli_name"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="L" org.eventb.core.identifier="cli_email"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="M" org.eventb.core.identifier="ride_begin"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="N" org.eventb.core.identifier="ride_end"/>
+<org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="(" org.eventb.core.assignment="SHARED_RIDES ≔ ∅" org.eventb.core.label="act25"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="car_average ≔ ∅" org.eventb.core.label="act26"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="grades_car ≔ ∅" org.eventb.core.label="act27"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="SHAREDCAR :∈ CARS" org.eventb.core.label="act28"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="FULLCARS ≔ ∅" org.eventb.core.label="act29"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="BEST_AVAILABLE_CAR :∈ CARS" org.eventb.core.label="act30"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="BEST_BUSY_CAR :∈ CARS" org.eventb.core.label="act31"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="SAME_PATH_TIME_RIDES ≔ ∅" org.eventb.core.label="act32"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="BUSY_AVAILABLE_CARS ≔ ∅" org.eventb.core.label="act33"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NEW_RIDE_SHARED">
+<org.eventb.core.action name="-" org.eventb.core.assignment="BEST_AVAILABLE_CAR :∈ ((car_serv∼[{IN_SERVICE}] ∩ AVAILABLE_CARS)◁car_average)∼[{max(ran((car_serv∼[{IN_SERVICE}] ∩ AVAILABLE_CARS)◁car_average))}]" org.eventb.core.comment="We choose the best car available (no rides)" org.eventb.core.label="act10"/>
+<org.eventb.core.parameter name="0" org.eventb.core.identifier="IN_RIDE"/>
+<org.eventb.core.parameter name="1" org.eventb.core.identifier="IN_SERVICE"/>
+<org.eventb.core.parameter name="2" org.eventb.core.identifier="IN_BEGIN"/>
+<org.eventb.core.parameter name="3" org.eventb.core.identifier="IN_END"/>
+<org.eventb.core.parameter name="4" org.eventb.core.identifier="IN_CLIENT"/>
+<org.eventb.core.guard name="5" org.eventb.core.label="grd14" org.eventb.core.predicate="IN_CLIENT ∈ CLIENTS"/>
+<org.eventb.core.guard name="6" org.eventb.core.label="grd15" org.eventb.core.predicate="IN_BEGIN &lt; IN_END"/>
+<org.eventb.core.guard name="7" org.eventb.core.label="grd16" org.eventb.core.predicate="IN_SERVICE ∈ ZOBERSERVICE"/>
+<org.eventb.core.guard name="8" org.eventb.core.label="grd17" org.eventb.core.predicate="IN_BEGIN ∈ ℕ ∧ IN_END ∈ ℕ"/>
+<org.eventb.core.guard name="9" org.eventb.core.label="grd18" org.eventb.core.predicate="IN_RIDE ∈ RIDES"/>
+<org.eventb.core.guard name=":" org.eventb.core.label="grd19" org.eventb.core.predicate="cli_status[{IN_CLIENT}] = {VIP} ⇒ IN_SERVICE = ZOBER_WHITE"/>
+<org.eventb.core.guard name=";" org.eventb.core.label="grd20" org.eventb.core.predicate="cli_status[{IN_CLIENT}] = {REGULAR} ⇒ card(ride_cli∼[{IN_CLIENT}]) ≤ 1"/>
+<org.eventb.core.guard name="D" org.eventb.core.comment="Sharing will exist when you're adding a ride and there is already one ride at the same time, path and service" org.eventb.core.label="grd21" org.eventb.core.predicate="card(same_route[{IN_RIDE}] ∩ ride_begin∼[{IN_BEGIN}] ∩ ride_car∼[car_serv∼[{IN_SERVICE}]]) ≠ 0"/>
+<org.eventb.core.action name="F" org.eventb.core.assignment="SAME_PATH_TIME_RIDES ≔ same_route[{IN_RIDE}] ∩ ride_begin∼[{IN_BEGIN}]" org.eventb.core.comment="Rides at the same time and path" org.eventb.core.label="act19"/>
+<org.eventb.core.action name="O" org.eventb.core.assignment="BUSY_AVAILABLE_CARS ≔ ride_car[SAME_PATH_TIME_RIDES] ∩ car_serv∼[{IN_SERVICE}]∖FULLCARS" org.eventb.core.comment="Cars still able to take more clients" org.eventb.core.label="act28"/>
+<org.eventb.core.action name="G" org.eventb.core.assignment="BEST_BUSY_CAR :∈ (BUSY_AVAILABLE_CARS◁car_average)∼[{max(ran(BUSY_AVAILABLE_CARS◁car_average))}]" org.eventb.core.comment="We choose the best car already booked, but with some space left!" org.eventb.core.label="act20"/>
+<org.eventb.core.action name="H" org.eventb.core.assignment="SHAREDCAR ≔ car_average∼(max({car_average(BEST_AVAILABLE_CAR), car_average(BEST_BUSY_CAR)}))" org.eventb.core.comment="We choose the best car between the best available,free car and the best car with someone already in it" org.eventb.core.label="act21"/>
+<org.eventb.core.action name="I" org.eventb.core.assignment="ride_car ≔ ride_car ∪ {IN_RIDE ↦ SHAREDCAR}" org.eventb.core.comment="We associate the input ride with our best car" org.eventb.core.label="act22"/>
+<org.eventb.core.action name="J" org.eventb.core.assignment="SCHEDULED_RIDES ≔ SCHEDULED_RIDES ∪ {IN_RIDE}" org.eventb.core.label="act23"/>
+<org.eventb.core.action name="K" org.eventb.core.assignment="BUSY_CARS ≔ BUSY_CARS ∪ {SHAREDCAR}" org.eventb.core.label="act24"/>
+<org.eventb.core.action name="L" org.eventb.core.assignment="ride_cli ≔ ride_cli ∪ {IN_RIDE ↦ IN_CLIENT}" org.eventb.core.label="act25"/>
+<org.eventb.core.action name="M" org.eventb.core.assignment="ride_begin ≔ ride_begin ∪ {IN_RIDE ↦ IN_BEGIN}" org.eventb.core.label="act26"/>
+<org.eventb.core.action name="N" org.eventb.core.assignment="ride_end ≔ ride_end ∪ {IN_RIDE ↦ IN_END}" org.eventb.core.label="act27"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CANCEL_RIDE">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="CANCEL_RIDE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="COMPLETE_RIDE">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="COMPLETE_RIDE"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="car_average ≔ car_average  {ride_car(IN_RIDE) ↦ ((car_average(ride_car(IN_RIDE)) ∗ card(grades_car∼[{ride_car(IN_RIDE)}]) + IN_GRADE) ÷ (card(grades_car∼[{ride_car(IN_RIDE)}]) +1))}" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="grades_car ≔ grades_car ∪ {IN_GRADE ↦ ride_car(IN_RIDE)}" org.eventb.core.label="act9"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="BAN_DRIVER">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="BAN_DRIVER"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REMOVE_CAR">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="REMOVE_CAR"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="V" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REMOVE_CLIENT">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="REMOVE_CLIENT"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="Z" org.eventb.core.identifier="SHARED_RIDES"/>
+<org.eventb.core.invariant name="[" org.eventb.core.label="inv2" org.eventb.core.predicate="SHARED_RIDES ⊆ SCHEDULED_RIDES"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="\" org.eventb.core.identifier="grades_car"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="]" org.eventb.core.identifier="car_average"/>
+<org.eventb.core.invariant name="^" org.eventb.core.label="inv3" org.eventb.core.predicate="grades_car ∈ 1‥5 ⇸ REG_CARS"/>
+<org.eventb.core.invariant name="_" org.eventb.core.label="inv4" org.eventb.core.predicate="car_average ∈ REG_CARS ↠ ℤ"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="`" org.eventb.core.identifier="REG_CARS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="a" org.eventb.core.identifier="SHAREDCAR"/>
+<org.eventb.core.invariant name="b" org.eventb.core.label="inv5" org.eventb.core.predicate="SHAREDCAR ∈ REG_CARS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="c" org.eventb.core.identifier="REG_LICENSES"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="d" org.eventb.core.identifier="dri_license"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="e" org.eventb.core.identifier="dri_name"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="f" org.eventb.core.comment="Carros com o maximo numero de clientes em viagem" org.eventb.core.identifier="FULLCARS"/>
+<org.eventb.core.invariant name="g" org.eventb.core.label="inv6" org.eventb.core.predicate="FULLCARS ⊆ BUSY_CARS"/>
+<org.eventb.core.event name="h" org.eventb.core.comment="When cars reach their capacity, they must be added to FULLCARS" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CAR_MAX_CLIENTS">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="car_serv(SHAREDCAR) = ZOBER_Y ⇒ card(ride_car∼[{SHAREDCAR}]) = 2"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="car_serv(SHAREDCAR) = ZOBER_WHITE ⇒ card(ride_car∼[{SHAREDCAR}]) = 4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="FULLCARS ≔ FULLCARS ∪ {SHAREDCAR}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="i" org.eventb.core.identifier="BEST_AVAILABLE_CAR"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="j" org.eventb.core.identifier="BEST_BUSY_CAR"/>
+<org.eventb.core.invariant name="k" org.eventb.core.label="inv7" org.eventb.core.predicate="BEST_AVAILABLE_CAR ∈ AVAILABLE_CARS"/>
+<org.eventb.core.invariant name="l" org.eventb.core.label="inv8" org.eventb.core.predicate="BEST_BUSY_CAR ∈ BUSY_CARS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="m" org.eventb.core.comment="Rides a mesma hora e no mesmo caminho" org.eventb.core.identifier="SAME_PATH_TIME_RIDES"/>
+<org.eventb.core.invariant name="n" org.eventb.core.label="inv9" org.eventb.core.predicate="SAME_PATH_TIME_RIDES ⊆ SCHEDULED_RIDES"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="o" org.eventb.core.comment="Carros a mesma hora, caminho e servico com clientes mas ainda com lugares disponiveis" org.eventb.core.identifier="BUSY_AVAILABLE_CARS"/>
+<org.eventb.core.invariant name="p" org.eventb.core.label="inv10" org.eventb.core.predicate="BUSY_AVAILABLE_CARS ⊆ BUSY_CARS"/>
+</org.eventb.core.machineFile>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" version="3">
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="EMAILS"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="NAMES"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.identifier="CLIENTS"/>
+<org.eventb.core.constant name="+" org.eventb.core.identifier="REGULAR"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="VIP"/>
+<org.eventb.core.axiom name="-" org.eventb.core.comment="Restriction 4" org.eventb.core.label="axm1" org.eventb.core.predicate="PLAN = {VIP, REGULAR}"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm2" org.eventb.core.predicate="VIP ≠ REGULAR"/>
+<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="PLAN"/>
+</org.eventb.core.contextFile>

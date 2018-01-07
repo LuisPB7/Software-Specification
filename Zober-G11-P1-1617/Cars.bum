@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Drivers"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="CarsContext"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="OWNERS"/>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="OWNERS ≔ ∅ " org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="car_drivers ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="car_owner ≔ ∅" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="car_serv≔ ∅" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="REG_CARS ≔ ∅" org.eventb.core.comment="Restriction 25" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="REG_DRIVERS ≔ ∅" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="BANNED_DRIVERS ≔ ∅" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="REG_NAMES ≔ ∅" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="REG_EMAILS ≔ ∅" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="REG_CLIENTS ≔ ∅" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="cli_name ≔ ∅" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="cli_status ≔ ∅" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="cli_email ≔ ∅" org.eventb.core.label="act14"/>
+<org.eventb.core.action name="6" org.eventb.core.assignment="REG_LICENSES ≔ ∅" org.eventb.core.label="act15"/>
+<org.eventb.core.action name="7" org.eventb.core.assignment="dri_license ≔ ∅" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="8" org.eventb.core.assignment="dri_name ≔ ∅" org.eventb.core.label="act17"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REMOVE_DRIVER">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="REMOVE_DRIVER"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ADD_CAR">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="IN_CAR"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="IN_OWNER"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="Restriction 18" org.eventb.core.label="grd1" org.eventb.core.predicate="IN_CAR ∈ (CARS ∖ REG_CARS)"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="IN_OWNER ∈ (REG_DRIVERS ∖ OWNERS)"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="REG_CARS ≔ REG_CARS ∪ {IN_CAR}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="OWNERS ≔ OWNERS ∪ {IN_OWNER}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="car_owner ≔ car_owner ∪ {IN_CAR ↦ IN_OWNER}" org.eventb.core.comment="Restriction 21" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="car_drivers ≔ car_drivers ∪ {IN_CAR ↦ IN_OWNER}" org.eventb.core.comment="Restriction 21" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="car_serv ≔ car_serv ∪ {IN_CAR ↦ ZOBER_Y}" org.eventb.core.comment="Restriction 24,26" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=";" org.eventb.core.identifier="car_owner"/>
+<org.eventb.core.invariant name="@" org.eventb.core.label="inv1" org.eventb.core.predicate="OWNERS ⊆ REG_DRIVERS"/>
+<org.eventb.core.variable name="F" org.eventb.core.identifier="car_serv"/>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REMOVE_CAR">
+<org.eventb.core.guard name="'" org.eventb.core.comment="Restriction 27" org.eventb.core.label="grd1" org.eventb.core.predicate="OUT_CAR ∈ REG_CARS"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="OUT_CAR"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="REG_CARS ≔ REG_CARS ∖ {OUT_CAR }" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="OWNERS ≔ OWNERS ∖ car_owner[{OUT_CAR}]" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="car_drivers ≔ {OUT_CAR} ⩤ car_drivers" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="car_owner ≔ {OUT_CAR} ⩤ car_owner" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="car_serv ≔ {OUT_CAR} ⩤ car_serv" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="I" org.eventb.core.identifier="REG_CARS"/>
+<org.eventb.core.invariant name="J" org.eventb.core.label="inv4" org.eventb.core.predicate="REG_CARS ⊆ CARS"/>
+<org.eventb.core.invariant name="K" org.eventb.core.label="inv5" org.eventb.core.predicate="car_drivers ∈ REG_CARS ↔ REG_DRIVERS"/>
+<org.eventb.core.variable name="L" org.eventb.core.identifier="car_drivers"/>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ADD_DRIVER_TO_CAR">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="IN_CAR"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="IN_CAR ∈ REG_CARS"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="car_drivers ≔ car_drivers ∪ {IN_CAR ↦ IN_DRIVER}" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="IN_DRIVER"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="Restriction 22, 28" org.eventb.core.label="grd2" org.eventb.core.predicate="IN_DRIVER ∈ REG_DRIVERS"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="Restriction 20" org.eventb.core.label="grd3" org.eventb.core.predicate="(card(car_drivers[{IN_CAR}]) &gt; 0) ∧ (card(car_drivers[{IN_CAR}]) &lt; 3)"/>
+<org.eventb.core.guard name="." org.eventb.core.comment="Restriction 23" org.eventb.core.label="grd4" org.eventb.core.predicate="card(car_drivers∼[{IN_DRIVER}]) &lt; 2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REMOVE_DRIVER_FROM_CAR">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="IN_CAR"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="OUT_DRIVER"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="IN_CAR ∈ REG_CARS"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="Restriction 28" org.eventb.core.label="grd2" org.eventb.core.predicate="OUT_DRIVER ∈ REG_DRIVERS"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="car_drivers ≔ car_drivers ∖ {IN_CAR ↦ OUT_DRIVER}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="(card(car_drivers[{IN_CAR}]) &gt; 1) ∧ (card(car_drivers[{IN_CAR}]) ≤ 3)"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="O" org.eventb.core.identifier="REG_DRIVERS"/>
+<org.eventb.core.invariant name="P" org.eventb.core.comment="Restriction 19" org.eventb.core.label="inv6" org.eventb.core.predicate="car_owner ∈ REG_CARS → OWNERS"/>
+<org.eventb.core.invariant name="Q" org.eventb.core.label="inv7" org.eventb.core.predicate="car_serv ∈ REG_CARS ⇸ ZOBERSERVICE"/>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BAN_DRIVER">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="OUT_DRIVER ∈ REG_DRIVERS"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="BANNED_DRIVERS ≔ BANNED_DRIVERS ∪ {OUT_DRIVER}" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="OUT_DRIVER"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="REG_DRIVERS ≔ REG_DRIVERS ∖ {OUT_DRIVER}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="REG_CARS ≔ REG_CARS ∖ car_owner∼[{OUT_DRIVER}]" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="car_owner ≔ car_owner ⩥ {OUT_DRIVER}" org.eventb.core.comment="Restriction 38" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="S" org.eventb.core.identifier="BANNED_DRIVERS"/>
+<org.eventb.core.invariant name="T" org.eventb.core.label="inv8" org.eventb.core.predicate="BANNED_DRIVERS ⊆ DRIVERS"/>
+<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NEW_DRIVER">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="NEW_DRIVER"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="IN_DRIVER ∉ BANNED_DRIVERS"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="IN_DRIVER"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="V" org.eventb.core.identifier="cli_status"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="W" org.eventb.core.identifier="REG_CLIENTS"/>
+<org.eventb.core.event name="X" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REMOVE_CLIENT">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="REMOVE_CLIENT"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="Y" org.eventb.core.identifier="REG_EMAILS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="Z" org.eventb.core.identifier="REG_NAMES"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="[" org.eventb.core.identifier="cli_email"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="\" org.eventb.core.identifier="cli_name"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="^" org.eventb.core.identifier="REG_LICENSES"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_" org.eventb.core.identifier="dri_license"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="`" org.eventb.core.identifier="dri_name"/>
+<org.eventb.core.invariant name="b" org.eventb.core.label="inv10" org.eventb.core.predicate="finite(REG_CARS)"/>
+<org.eventb.core.invariant name="c" org.eventb.core.label="inv11" org.eventb.core.predicate="finite(REG_DRIVERS)"/>
+<org.eventb.core.invariant name="d" org.eventb.core.label="inv12" org.eventb.core.predicate="finite(car_drivers)"/>
+</org.eventb.core.machineFile>

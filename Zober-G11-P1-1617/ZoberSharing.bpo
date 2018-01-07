@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.poIdentifier name="NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="PLAN" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.poIdentifier name="REGULAR" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poIdentifier name="VIP" org.eventb.core.type="PLAN"/>
+<org.eventb.core.poPredicate name="REGULAS" org.eventb.core.predicate="PLAN={VIP,REGULAR}" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="REGULAT" org.eventb.core.predicate="VIP≠REGULAR" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.axiom#."/>
+<org.eventb.core.poIdentifier name="DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.poIdentifier name="CARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="ZOBERSERVICE" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ZOBER_WHITE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poIdentifier name="ZOBER_Y" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poPredicate name="ZOBERSERVICF" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="ZOBERSERVICG" org.eventb.core.predicate="ZOBER_Y≠ZOBER_WHITE" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poIdentifier name="RIDES" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="same_route" org.eventb.core.type="ℙ(RIDES×RIDES)"/>
+<org.eventb.core.poPredicate name="ZOBERSERVICH" org.eventb.core.predicate="same_route∈RIDES → RIDES" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharingContext.buc|org.eventb.core.contextFile#ZoberSharingContext|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="AVAILABLE_CARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="BANNED_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="BEST_AVAILABLE_CAR" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="BEST_BUSY_CAR" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="BUSY_AVAILABLE_CARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="BUSY_CARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="FULLCARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="OWNERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="REG_CARS" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="REG_CLIENTS" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="REG_DRIVERS" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="REG_EMAILS" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.poIdentifier name="REG_LICENSES" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.poIdentifier name="REG_NAMES" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="RIDECAR" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="SAME_PATH_TIME_RIDES" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="SCHEDULED_RIDES" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="SHAREDCAR" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="SHARED_RIDES" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="car_average" org.eventb.core.type="ℙ(CARS×ℤ)"/>
+<org.eventb.core.poIdentifier name="car_drivers" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_owner" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="car_serv" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="cli_email" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="cli_name" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_status" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="dri_license" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="dri_name" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="grades_car" org.eventb.core.type="ℙ(ℤ×CARS)"/>
+<org.eventb.core.poIdentifier name="ride_begin" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_car" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="ride_cli" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="ride_end" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_grade" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDET" org.eventb.core.predicate="REG_CLIENTS⊆CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEU" org.eventb.core.predicate="REG_EMAILS⊆EMAILS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEV" org.eventb.core.predicate="REG_NAMES⊆NAMES" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEW" org.eventb.core.predicate="cli_email∈REG_CLIENTS ⤖ REG_EMAILS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEX" org.eventb.core.predicate="cli_name∈REG_CLIENTS ⇸ REG_NAMES" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEY" org.eventb.core.predicate="cli_status∈REG_CLIENTS → PLAN" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.invariant#9"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEZ" org.eventb.core.predicate="REG_DRIVERS⊆DRIVERS" org.eventb.core.source="/Zober-G11-P1-1617/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDE[" org.eventb.core.predicate="REG_LICENSES⊆LICENSES" org.eventb.core.source="/Zober-G11-P1-1617/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDE\" org.eventb.core.predicate="dri_name∈REG_DRIVERS ⇸ REG_NAMES" org.eventb.core.source="/Zober-G11-P1-1617/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDE]" org.eventb.core.predicate="dri_license∈REG_DRIVERS ⤖ REG_LICENSES" org.eventb.core.source="/Zober-G11-P1-1617/Drivers.bum|org.eventb.core.machineFile#Drivers|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDE^" org.eventb.core.predicate="OWNERS⊆REG_DRIVERS" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#@"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDE_" org.eventb.core.predicate="REG_CARS⊆CARS" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#J"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDE`" org.eventb.core.predicate="car_drivers∈REG_CARS ↔ REG_DRIVERS" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#K"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEa" org.eventb.core.predicate="car_owner∈REG_CARS → OWNERS" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#P"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEb" org.eventb.core.predicate="car_serv∈REG_CARS ⇸ ZOBERSERVICE" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#Q"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEc" org.eventb.core.predicate="BANNED_DRIVERS⊆DRIVERS" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#T"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEd" org.eventb.core.predicate="finite(REG_CARS)" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#b"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEe" org.eventb.core.predicate="finite(REG_DRIVERS)" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#c"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEf" org.eventb.core.predicate="finite(car_drivers)" org.eventb.core.source="/Zober-G11-P1-1617/Cars.bum|org.eventb.core.machineFile#Cars|org.eventb.core.invariant#d"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEg" org.eventb.core.predicate="SCHEDULED_RIDES⊆RIDES" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEh" org.eventb.core.predicate="BUSY_CARS⊆REG_CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEi" org.eventb.core.predicate="ride_car∈SCHEDULED_RIDES → BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEj" org.eventb.core.predicate="AVAILABLE_CARS⊆REG_CARS ∖ BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEk" org.eventb.core.predicate="RIDECAR∈AVAILABLE_CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#9"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEl" org.eventb.core.predicate="ride_grade∈SCHEDULED_RIDES → 1 ‥ 5" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEm" org.eventb.core.predicate="ride_cli∈SCHEDULED_RIDES ↔ REG_CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#F"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEn" org.eventb.core.predicate="ride_begin∈SCHEDULED_RIDES → 0 ‥ 23" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#O"/>
+<org.eventb.core.poPredicate name="SAME_PATH_TIME_RIDEo" org.eventb.core.predicate="ride_end∈SCHEDULED_RIDES → 0 ‥ 23" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.invariant#P"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(RIDES))⊆(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×CARS))∈1 ‥ 5 ⇸ (∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#^"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#^"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CARS×ℤ))∈(∅ ⦂ ℙ(CARS)) ↠ ℤ" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#_"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#_"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="SHAREDCAR'∈CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SHAREDCAR'∈(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#b"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#b"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CARS))⊆(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="BEST_AVAILABLE_CAR'∈CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BEST_AVAILABLE_CAR'∈(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#k"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#k"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="BEST_BUSY_CAR'∈CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BEST_BUSY_CAR'∈(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#l"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#l"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(RIDES))⊆(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CARS))⊆(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#p"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#p"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#INITIALISATION\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act28/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="RIDECAR'∈CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+|org.eventb.core.action#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CARS≠(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act30/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="RIDECAR'∈CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+|org.eventb.core.action#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CARS≠(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act31/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="RIDECAR'∈CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#+|org.eventb.core.action#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CARS≠(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#O|org.eventb.core.action#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDET"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDET" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="BUSY_AVAILABLE_CARS'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="grades_car'" org.eventb.core.type="ℙ(ℤ×CARS)"/>
+<org.eventb.core.poIdentifier name="SCHEDULED_RIDES'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="REG_NAMES'" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.poIdentifier name="SAME_PATH_TIME_RIDES'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="FULLCARS'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="BUSY_CARS'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="car_owner'" org.eventb.core.type="ℙ(CARS×DRIVERS)"/>
+<org.eventb.core.poIdentifier name="RIDECAR'" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="dri_name'" org.eventb.core.type="ℙ(DRIVERS×NAMES)"/>
+<org.eventb.core.poIdentifier name="SHAREDCAR'" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="car_average'" org.eventb.core.type="ℙ(CARS×ℤ)"/>
+<org.eventb.core.poIdentifier name="REG_CARS'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="dri_license'" org.eventb.core.type="ℙ(DRIVERS×LICENSES)"/>
+<org.eventb.core.poIdentifier name="REG_LICENSES'" org.eventb.core.type="ℙ(LICENSES)"/>
+<org.eventb.core.poIdentifier name="BEST_AVAILABLE_CAR'" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="car_serv'" org.eventb.core.type="ℙ(CARS×ZOBERSERVICE)"/>
+<org.eventb.core.poIdentifier name="ride_car'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="cli_status'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="cli_name'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_email'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="BANNED_DRIVERS'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="REG_DRIVERS'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.poIdentifier name="BEST_BUSY_CAR'" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="REG_CLIENTS'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="SHARED_RIDES'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_cli'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="ride_grade'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="AVAILABLE_CARS'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="REG_EMAILS'" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDET" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDET" org.eventb.core.poStamp="28"/>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/grd20/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDEU,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cli_status[{IN_CLIENT}]={REGULAR}⇒finite(ride_cli∼[{IN_CLIENT}])" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDEU,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/grd21/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDEU-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(same_route[{IN_RIDE}]∩ride_begin∼[{IN_BEGIN}]∩ride_car∼[car_serv∼[{IN_SERVICE}]])" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#D"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#D"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDEU-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SHARED_RIDES⊆SCHEDULED_RIDES∪{IN_RIDE}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car_average∼(max({car_average(BEST_AVAILABLE_CAR),car_average(BEST_BUSY_CAR)}))∈REG_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#b"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#b"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FULLCARS⊆BUSY_CARS∪{SHAREDCAR}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="BEST_AVAILABLE_CAR'∈((car_serv∼[{IN_SERVICE}]∩AVAILABLE_CARS) ◁ car_average)∼[{max(ran((car_serv∼[{IN_SERVICE}]∩AVAILABLE_CARS) ◁ car_average))}]" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BEST_AVAILABLE_CAR'∈AVAILABLE_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#k"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#k"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="BEST_BUSY_CAR'∈(BUSY_AVAILABLE_CARS ◁ car_average)∼[{max(ran(BUSY_AVAILABLE_CARS ◁ car_average))}]" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#G"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BEST_BUSY_CAR'∈BUSY_CARS∪{SHAREDCAR}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#l"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#l"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="same_route[{IN_RIDE}]∩ride_begin∼[{IN_BEGIN}]⊆SCHEDULED_RIDES∪{IN_RIDE}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ride_car[SAME_PATH_TIME_RIDES]∩car_serv∼[{IN_SERVICE}] ∖ FULLCARS⊆BUSY_CARS∪{SHAREDCAR}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#p"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#p"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/act10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran((car_serv∼[{IN_SERVICE}]∩AVAILABLE_CARS) ◁ car_average)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran((car_serv∼[{IN_SERVICE}]∩AVAILABLE_CARS) ◁ car_average)⇒b≥x)" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/act10/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="((car_serv∼[{IN_SERVICE}]∩AVAILABLE_CARS) ◁ car_average)∼[{max(ran((car_serv∼[{IN_SERVICE}]∩AVAILABLE_CARS) ◁ car_average))}]≠(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/act20/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran(BUSY_AVAILABLE_CARS ◁ car_average)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(BUSY_AVAILABLE_CARS ◁ car_average)⇒b≥x)" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#G"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#G"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/act20/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(BUSY_AVAILABLE_CARS ◁ car_average)∼[{max(ran(BUSY_AVAILABLE_CARS ◁ car_average))}]≠(∅ ⦂ ℙ(CARS))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#G"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#G"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/act21/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BEST_AVAILABLE_CAR∈dom(car_average)∧car_average∈CARS ⇸ ℤ∧BEST_BUSY_CAR∈dom(car_average)∧{car_average(BEST_AVAILABLE_CAR),car_average(BEST_BUSY_CAR)}≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈{car_average(BEST_AVAILABLE_CAR),car_average(BEST_BUSY_CAR)}⇒b≥x)∧max({car_average(BEST_AVAILABLE_CAR),car_average(BEST_BUSY_CAR)})∈dom(car_average∼)∧car_average∼∈ℤ ⇸ CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#H"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#H"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/BUSY_CARS/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BUSY_CARS∪{SHAREDCAR}=BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#K"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/BUSY_CARS\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/SCHEDULED_RIDES/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SCHEDULED_RIDES∪{IN_RIDE}=SCHEDULED_RIDES" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#J"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/SCHEDULED_RIDES\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/ride_begin/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ride_begin∪{IN_RIDE ↦ IN_BEGIN}=ride_begin" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#M"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/ride_begin\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/ride_car/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ride_car∪{IN_RIDE ↦ SHAREDCAR}=ride_car" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#I"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/ride_car\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/ride_cli/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ride_cli∪{IN_RIDE ↦ IN_CLIENT}=ride_cli" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#L"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/ride_cli\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NEW_RIDE_SHARED/ride_end/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ride_end∪{IN_RIDE ↦ IN_END}=ride_end" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.action#N"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#NEW_RIDE_SHARED\/ride_end\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDEU" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poIdentifier name="BUSY_AVAILABLE_CARS'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="IN_BEGIN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="SCHEDULED_RIDES'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="ride_end'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="SAME_PATH_TIME_RIDES'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="BUSY_CARS'" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.poIdentifier name="SHAREDCAR'" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="IN_SERVICE" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.poIdentifier name="BEST_AVAILABLE_CAR'" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="IN_END" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ride_car'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="IN_RIDE" org.eventb.core.type="RIDES"/>
+<org.eventb.core.poIdentifier name="BEST_BUSY_CAR'" org.eventb.core.type="CARS"/>
+<org.eventb.core.poIdentifier name="ride_begin'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_cli'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="IN_CLIENT" org.eventb.core.type="CLIENTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPSAME_PATH_TIME_RIDEU," org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDEU" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IN_CLIENT∈CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#5"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IN_BEGIN&lt;IN_END" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#6"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IN_SERVICE∈ZOBERSERVICE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#7"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="IN_BEGIN∈ℕ∧IN_END∈ℕ" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#8"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="IN_RIDE∈RIDES" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#9"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cli_status[{IN_CLIENT}]={VIP}⇒IN_SERVICE=ZOBER_WHITE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#:"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPSAME_PATH_TIME_RIDEU-" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDEU," org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="cli_status[{IN_CLIENT}]={REGULAR}⇒card(ride_cli∼[{IN_CLIENT}])≤1" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDEU" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDEU-" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="card(same_route[{IN_RIDE}]∩ride_begin∼[{IN_BEGIN}]∩ride_car∼[car_serv∼[{IN_SERVICE}]])≠0" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#P|org.eventb.core.guard#D"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CANCEL_RIDE/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEV"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SHARED_RIDES⊆SCHEDULED_RIDES ∖ {IN_RIDE}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#Q"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#CANCEL_RIDE\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CANCEL_RIDE/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEV"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SAME_PATH_TIME_RIDES⊆SCHEDULED_RIDES ∖ {IN_RIDE}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#Q"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#CANCEL_RIDE\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDEV" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="SCHEDULED_RIDES'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="IN_RIDE" org.eventb.core.type="RIDES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDEV" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDEV" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IN_RIDE∈SCHEDULED_RIDES" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#4|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="COMPLETE_RIDE/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SHARED_RIDES⊆SCHEDULED_RIDES ∖ {IN_RIDE}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#COMPLETE_RIDE\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="COMPLETE_RIDE/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="grades_car∪{IN_GRADE ↦ ride_car(IN_RIDE)}∈1 ‥ 5 ⇸ REG_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#^"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#^"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#COMPLETE_RIDE\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="COMPLETE_RIDE/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car_average{ride_car(IN_RIDE) ↦ (car_average(ride_car(IN_RIDE))∗card(grades_car∼[{ride_car(IN_RIDE)}])+IN_GRADE) ÷ (card(grades_car∼[{ride_car(IN_RIDE)}])+1)}∈REG_CARS ↠ ℤ" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#_"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#_"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#COMPLETE_RIDE\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="COMPLETE_RIDE/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SAME_PATH_TIME_RIDES⊆SCHEDULED_RIDES ∖ {IN_RIDE}" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#COMPLETE_RIDE\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="COMPLETE_RIDE/act8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IN_RIDE∈dom(ride_car)∧ride_car∈RIDES ⇸ CARS∧ride_car(IN_RIDE)∈dom(car_average)∧car_average∈CARS ⇸ ℤ∧finite(grades_car∼[{ride_car(IN_RIDE)}])∧card(grades_car∼[{ride_car(IN_RIDE)}])+1≠0" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R|org.eventb.core.action#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R|org.eventb.core.action#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="COMPLETE_RIDE/act9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IN_RIDE∈dom(ride_car)∧ride_car∈RIDES ⇸ CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#R|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDEW"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDEW" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="grades_car'" org.eventb.core.type="ℙ(ℤ×CARS)"/>
+<org.eventb.core.poIdentifier name="SCHEDULED_RIDES'" org.eventb.core.type="ℙ(RIDES)"/>
+<org.eventb.core.poIdentifier name="IN_GRADE" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="car_average'" org.eventb.core.type="ℙ(CARS×ℤ)"/>
+<org.eventb.core.poIdentifier name="ride_car'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+<org.eventb.core.poIdentifier name="IN_RIDE" org.eventb.core.type="RIDES"/>
+<org.eventb.core.poIdentifier name="ride_cli'" org.eventb.core.type="ℙ(RIDES×CLIENTS)"/>
+<org.eventb.core.poIdentifier name="ride_grade'" org.eventb.core.type="ℙ(RIDES×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDEW" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDEW" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IN_RIDE∈SCHEDULED_RIDES" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IN_GRADE∈ℕ1" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IN_GRADE≥1∧IN_GRADE≤5" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDEX" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="OUT_DRIVER" org.eventb.core.type="DRIVERS"/>
+<org.eventb.core.poIdentifier name="ride_car'" org.eventb.core.type="ℙ(RIDES×CARS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDEX" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDEX" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="OUT_DRIVER∈REG_DRIVERS ∖ BANNED_DRIVERS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDEY" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="OUT_CAR" org.eventb.core.type="CARS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDEY" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDEY" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="OUT_CAR∉BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#B|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDEZ" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="cli_status'" org.eventb.core.type="ℙ(CLIENTS×PLAN)"/>
+<org.eventb.core.poIdentifier name="OUT_CLIENT" org.eventb.core.type="CLIENTS"/>
+<org.eventb.core.poIdentifier name="cli_name'" org.eventb.core.type="ℙ(CLIENTS×NAMES)"/>
+<org.eventb.core.poIdentifier name="cli_email'" org.eventb.core.type="ℙ(CLIENTS×EMAILS)"/>
+<org.eventb.core.poIdentifier name="REG_CLIENTS'" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.poIdentifier name="REG_EMAILS'" org.eventb.core.type="ℙ(EMAILS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDEZ" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDEZ" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="OUT_CLIENT∈REG_CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/Clients.bum|org.eventb.core.machineFile#Clients|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ride_cli∼[{OUT_CLIENT}]=(∅ ⦂ ℙ(RIDES))" org.eventb.core.source="/Zober-G11-P1-1617/Rides.bum|org.eventb.core.machineFile#Rides|org.eventb.core.event#H|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CAR_MAX_CLIENTS/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDE["/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SHAREDCAR∈dom(car_serv)∧car_serv∈CARS ⇸ ZOBERSERVICE∧(car_serv(SHAREDCAR)=ZOBER_Y⇒finite(ride_car∼[{SHAREDCAR}]))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#h|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#h|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDE["/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CAR_MAX_CLIENTS/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDE['"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SHAREDCAR∈dom(car_serv)∧car_serv∈CARS ⇸ ZOBERSERVICE∧(car_serv(SHAREDCAR)=ZOBER_WHITE⇒finite(ride_car∼[{SHAREDCAR}]))" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#h|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#h|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDE['"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CAR_MAX_CLIENTS/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTALLHYPSAME_PATH_TIME_RIDE["/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FULLCARS∪{SHAREDCAR}⊆BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#h"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poSequent#CAR_MAX_CLIENTS\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSAME_PATH_TIME_RIDE[" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="FULLCARS'" org.eventb.core.type="ℙ(CARS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPSAME_PATH_TIME_RIDE['" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTIDENTSAME_PATH_TIME_RIDE[" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="car_serv(SHAREDCAR)=ZOBER_Y⇒card(ride_car∼[{SHAREDCAR}])=2" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#h|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSAME_PATH_TIME_RIDE[" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#EVTHYPSAME_PATH_TIME_RIDE['" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="car_serv(SHAREDCAR)=ZOBER_WHITE⇒card(ride_car∼[{SHAREDCAR}])=4" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.event#h|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Zober-G11-P1-1617/ZoberSharing.bpo|org.eventb.core.poFile#ZoberSharing|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="SHARED_RIDES⊆SCHEDULED_RIDES" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#["/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="grades_car∈1 ‥ 5 ⇸ REG_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#^"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="car_average∈REG_CARS ↠ ℤ" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#_"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="SHAREDCAR∈REG_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#b"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="FULLCARS⊆BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#g"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="BEST_AVAILABLE_CAR∈AVAILABLE_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#k"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="BEST_BUSY_CAR∈BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#l"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="SAME_PATH_TIME_RIDES⊆SCHEDULED_RIDES" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#n"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="BUSY_AVAILABLE_CARS⊆BUSY_CARS" org.eventb.core.source="/Zober-G11-P1-1617/ZoberSharing.bum|org.eventb.core.machineFile#ZoberSharing|org.eventb.core.invariant#p"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

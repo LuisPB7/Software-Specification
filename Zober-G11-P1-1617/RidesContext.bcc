@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Zober-G11-P1-1617/CarsContext.bcc|org.eventb.core.scContextFile#CarsContext" org.eventb.core.source="/Zober-G11-P1-1617/RidesContext.buc|org.eventb.core.contextFile#RidesContext|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="ClientsContext">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="PLAN={VIP,REGULAR}" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="VIP≠REGULAR" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="CLIENTS" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.carrierSet#*" org.eventb.core.type="ℙ(CLIENTS)"/>
+<org.eventb.core.scCarrierSet name="EMAILS" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(EMAILS)"/>
+<org.eventb.core.scCarrierSet name="NAMES" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(NAMES)"/>
+<org.eventb.core.scCarrierSet name="PLAN" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.carrierSet#0" org.eventb.core.type="ℙ(PLAN)"/>
+<org.eventb.core.scConstant name="REGULAR" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.constant#+" org.eventb.core.type="PLAN"/>
+<org.eventb.core.scConstant name="VIP" org.eventb.core.source="/Zober-G11-P1-1617/ClientsContext.buc|org.eventb.core.contextFile#ClientsContext|org.eventb.core.constant#," org.eventb.core.type="PLAN"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="DriversContext">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Zober-G11-P1-1617/ClientsContext.bcc|org.eventb.core.scContextFile#ClientsContext" org.eventb.core.source="/Zober-G11-P1-1617/DriversContext.buc|org.eventb.core.contextFile#DriversContext|org.eventb.core.extendsContext#)"/>
+<org.eventb.core.scCarrierSet name="DRIVERS" org.eventb.core.source="/Zober-G11-P1-1617/DriversContext.buc|org.eventb.core.contextFile#DriversContext|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(DRIVERS)"/>
+<org.eventb.core.scCarrierSet name="LICENSES" org.eventb.core.source="/Zober-G11-P1-1617/DriversContext.buc|org.eventb.core.contextFile#DriversContext|org.eventb.core.carrierSet#*" org.eventb.core.type="ℙ(LICENSES)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="CarsContext">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Zober-G11-P1-1617/DriversContext.bcc|org.eventb.core.scContextFile#DriversContext" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="DriversContexu" org.eventb.core.label="axm1" org.eventb.core.predicate="ZOBERSERVICE={ZOBER_Y,ZOBER_WHITE}" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="DriversContexv" org.eventb.core.label="axm2" org.eventb.core.predicate="ZOBER_Y≠ZOBER_WHITE" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="CARS" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(CARS)"/>
+<org.eventb.core.scCarrierSet name="ZOBERSERVICE" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(ZOBERSERVICE)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="ZOBER_WHITE" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.constant#+" org.eventb.core.type="ZOBERSERVICE"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="ZOBER_Y" org.eventb.core.source="/Zober-G11-P1-1617/CarsContext.buc|org.eventb.core.contextFile#CarsContext|org.eventb.core.constant#*" org.eventb.core.type="ZOBERSERVICE"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scCarrierSet name="RIDES" org.eventb.core.source="/Zober-G11-P1-1617/RidesContext.buc|org.eventb.core.contextFile#RidesContext|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(RIDES)"/>
+</org.eventb.core.scContextFile>

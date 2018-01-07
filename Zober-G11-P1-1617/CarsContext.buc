@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="DriversContext"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="CARS"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="ZOBERSERVICE"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="ZOBER_Y"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="ZOBER_WHITE"/>
+<org.eventb.core.axiom name="," org.eventb.core.comment="Restriction 24" org.eventb.core.label="axm1" org.eventb.core.predicate="ZOBERSERVICE = {ZOBER_Y, ZOBER_WHITE}"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm2" org.eventb.core.predicate="ZOBER_Y ≠ ZOBER_WHITE"/>
+</org.eventb.core.contextFile>
